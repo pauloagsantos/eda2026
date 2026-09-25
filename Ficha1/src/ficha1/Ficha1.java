@@ -18,7 +18,7 @@ public class Ficha1 {
         Math.factorialBigI(0);
         // TODO code application logic here
         for(int i = 1000; i <= 20000; i+=1000) {
-            System.out.println(i+"! takes " + runXTimesFactorialI(10, i));
+            System.out.println(i+" takes " + runXTimesFactorialI(10, i));
         }
         System.out.println("---------------------");
         for(int i = 1000; i <= 20000; i+=1000) {
