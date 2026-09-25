@@ -4,6 +4,8 @@
  */
 package ficha1;
 
+import java.math.BigInteger;
+
 /**
  *
  * @author IPT
@@ -22,12 +24,26 @@ public class Math {
     // 5N+2 Temporal Complexity is O(N) Linear
     // num + return = 2 variables per function
     // 2 * (N+1) recursivity calls
-    // 2N+2 variables Spacial Complexity is S(N) Linear 
+    // 2N+2 variables Spacial Complexity is S(N)  
     public static int factorialR(int num) {
         if (num==0)                        // N+1
             return 1;                      // 1
         else 
             return num*factorialR(num-1);  // N+N+N+N
     }
+    
+     public static BigInteger factorialBigI(int num) {
+        BigInteger f = BigInteger.ONE;                     
+        for(int i = 1; i <= num; i++)  
+            f=f.multiply(BigInteger.valueOf(i));                      
+        return f;                      
+    }
+     
+    public static BigInteger factorialBigR(int num) {
+        if (num==0)                        
+            return BigInteger.ONE;                      
+        else 
+            return factorialBigR(num-1).multiply(BigInteger.valueOf(num));  
+    } 
     
 }
