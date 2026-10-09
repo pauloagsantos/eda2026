@@ -103,6 +103,18 @@ public class LinkedSingleList implements LinkedList{
             return tail.data;
     }
     
+    @Override
+    public int count(Object o) {
+        Item aux = head;
+        int count = 0;
+        while(aux != null) {
+            if (aux.data.equals(o))
+                count++;
+            aux=aux.next;
+        }
+        return count;
+    }
+    
     private class Item {
         Object data;
         Item next;
